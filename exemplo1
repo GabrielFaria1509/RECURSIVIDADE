@@ -1,0 +1,25 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int potencia(int a, int e) {
+    if(e == 0)
+        return 1;
+    else
+        return a * potencia(a, (e - 1));          //vai diminuindo ox expoentes até ficar a*a*a e vezes
+}
+
+int main()
+{
+    int a; //base
+    int e; //expoente
+    
+    cin >> a;
+    cin >> e;
+
+    int res = potencia(a, e);
+
+    cout << res << endl;
+
+}
+   
